@@ -1,6 +1,9 @@
 node_modules
 ./node_modules
 
+https
+./https
+
 cert.pem
 ./cert.pem
 ./https/cert.pem
