@@ -1,0 +1,10 @@
+node_modules
+./node_modules
+
+cert.pem
+./cert.pem
+./https/cert.pem
+
+key.pem
+./key.pem
+./https/key.pem
