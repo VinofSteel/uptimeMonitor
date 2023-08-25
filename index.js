@@ -4,7 +4,6 @@
  *
  */
 
-//Dependencies
 const http = require('http');
 const https = require('https');
 const config = require('./server/config');
