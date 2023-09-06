@@ -9,6 +9,7 @@ const http = require('http');
 const https = require('https');
 const url = require('url');
 const StringDecoder = require('string_decoder').StringDecoder;
+const querystring = require('querystring');
 const config = require('./lib/config');
 const fs = require('fs');
 const handlers = require('./lib/handlers');
@@ -28,8 +29,8 @@ const unifiedServer = (req, res) => {
     const parsedUrl = url.parse(req.url, true);
     const path = parsedUrl.pathname;
     const trimmedPath = path.replace(/^\/+|\/+$/g, '');
+    const queryStringObject = parsedUrl.query; //@TODO change this to a dynamic generation using Object.keys/values
 
-    const queryStringObject = parsedUrl.query;
     const method = req.method.toLowerCase();
     const headers = req.headers;
 
